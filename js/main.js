@@ -10,13 +10,15 @@ const tempClient = {
     nome: "Silvio",
     email: "silvio@gmail.com",
     celular: "1192222-2222",
-    cdade: "Jandira",
+    cdade: "Jandira"
 
 }
 
 // CRUD - create read  update  delete:
 const createClient = (client) => {
-    localStorage.setItem("teste", "teste para o crud")
+    const db_client = JSON.parse(localStorage.getItem('db_client')) ?? [ ]
+    db_client.push(client)
+    localStorage.setItem("db_client", JSON.stringify(db_client))
 }
 
 // Eventos
