@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js" defer></script>
-    <title>crud</title>
-=======
-     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-    <title>test 2</title>
->>>>>>> 62422d30866b0ea790690dcafbb8936d8cf5142a
+    <title>CRUD</title>
 </head>
+
 <body>
     <header>
         <h1 class="header-title">Cadastro de Cliente</h1>
     </header>
     <main>
-        <button type="button" class="button blue mobile"
-        id="cadastrarCliente">Cadastrar Cliente</button>
-        <table class="records">
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table id="tableClient" class="records">
             <thead>
                 <tr>
                     <th>nome</th>
@@ -90,16 +92,17 @@
                     <span class="modal-close" id="modalClose">&#10006;</span>
 
                 </header>
-                <form class="modal-form">
-                    <input type="text" id="main-input"  placeholder="Nome">
-                    <input type="text" class="modal-field" placeholder="e-mail">
-                    <input type="text" class="modal-field" placeholder="Celular ">
-                    <input type="text" class="modal-field" placeholder="Cidade">
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
+                        required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="Celular " required>
+                    <input type="text" id="cideda" class="modal-field" placeholder="Cidade" required>
 
                 </form>
                 <footer class="modal-footer">
-                    <button class="button-salvar">Salvar</button>
-                    <button class="button-cancelar">Cancelar</button>
+                    <button id="Salvar" class="button-salvar">Salvar</button>
+                    <button id="Cancelar" class="button-cancelar">Cancelar</button>
 
                 </footer>
             </div>
@@ -108,6 +111,7 @@
     <footer>
         copyright &copy; SILVAO
     </footer>
-    
+
 </body>
+
 </html>
